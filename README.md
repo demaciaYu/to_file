@@ -1,8 +1,9 @@
-# ToFile
+# Introduction about ToFile
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/to_file`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem is aim to transform the format of objects to be suitable for exporting , and export them into specific files. </br>
 
-TODO: Delete this and the text above, and describe your gem
+Currently supported export files: </br>
+* `YAML`
 
 ## Installation
 
@@ -22,7 +23,28 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+It's very easy to use and the common usage is: <br />
+
+```ruby
+ToFile::To.NAME_OF_FILE(object, export_path = './exaple.FILE_TYPE', confirmation = true)
+```
+
+Some explanation about the parameters: <br />
+
+* `object`:                 The ruby object which you want to export into files. <br />
+* `export_path`(optional):  The path where you want to generate your export file. Default will be './example.FILE_TYPE' such as './example.yml' <br />
+* `confirmation`(optional): To confirm if you want to overwrite the existing file from export_path. <br />
+
+## Here are some samples:
+
+* YAML
+
+```ruby
+require 'to_file'
+
+a = [1,2,3]
+ToFile::To.yml(a, './test/a.yml', false)
+```
 
 ## Development
 
@@ -32,4 +54,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/to_file.
+Bug reports and pull requests are welcome on GitHub at https://github.com/demaciaYu/to_file.

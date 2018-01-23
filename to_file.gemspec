@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{"The easist way to export object to files"}
   spec.description   = %q{"This gem is aim to transform the format of objects to be suitable for exporting , and export them into specific files. "}
-  spec.homepage      = "https://github.com/demaciaYu/to_file/tree/master"
+  spec.homepage      = "https://github.com/demaciaYu/to_file"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
