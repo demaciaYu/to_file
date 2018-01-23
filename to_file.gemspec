@@ -6,12 +6,12 @@ require "to_file/version"
 Gem::Specification.new do |spec|
   spec.name          = "to_file"
   spec.version       = ToFile::VERSION
-  spec.authors       = ["Johnny Yu"]
-  spec.email         = ["375077152@qq.com"]
+  spec.authors       = ["feiyang yu"]
+  spec.email         = ["yufeiyang009334@gmail.com"]
 
   spec.summary       = %q{"The easist way to export object to files"}
   spec.description   = %q{"This gem is aim to transform the format of objects to be suitable for exporting , and export them into specific files. "}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/demaciaYu/to_file/tree/master"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
