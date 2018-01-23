@@ -3,7 +3,7 @@
 This gem is aim to transform the format of objects to be suitable for exporting , and export them into specific files. </br>
 
 Currently supported export files: </br>
-* YAML
+* `YAML`
 
 ## Installation
 
@@ -31,13 +31,13 @@ ToFile::To.NAME_OF_FILE(object, export_path = './exaple.FILE_TYPE', confirmation
 
 Some explanation about the parameters: <br />
 
-* `object`:                 The ruby object which you want to export into files.
-* `export_path`(optional):  The path where you want to generate your export file. Default will be './example.FILE_TYPE' such as './example.yml'
-* `confirmation`(optional): To confirm if you want to overwrite the existing file from export_path.
+* `object`:                 The ruby object which you want to export into files. <br />
+* `export_path`(optional):  The path where you want to generate your export file. Default will be './example.FILE_TYPE' such as './example.yml' <br />
+* `confirmation`(optional): To confirm if you want to overwrite the existing file from export_path. <br />
 
 ## Here are some samples:
 
-* --start-- YAML --start--
+* YAML
 
 ```ruby
 require 'to_file'
@@ -45,8 +45,6 @@ require 'to_file'
 a = [1,2,3]
 ToFile::To.yml(a, './test/a.yml', false)
 ```
-
-* --end-- YAML --end--
 
 ## Development
 
