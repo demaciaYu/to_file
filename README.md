@@ -1,9 +1,10 @@
 # Introduction about ToFile
 
-This gem is aim to transform the format of objects to be suitable for exporting , and export them into specific files. </br>
+This gem is aim to transform the format of objects to be suitable for exporting , and export them into specific files. It's super easy to extend data type which supported by ruby but not in this gem.</br>
 
 Currently supported export files: </br>
 * `YAML`
+* `JSON`
 
 ## Installation
 
@@ -26,14 +27,14 @@ Or install it yourself as:
 It's very easy to use and the common usage is: <br />
 
 ```ruby
-ToFile::To.NAME_OF_FILE(object, export_path = './exaple.FILE_TYPE', confirmation = true)
+ToFile::To.NAME_OF_FILE(object, export_path = './exaple.FILE_TYPE', force_overwrite = false)
 ```
 
 Some explanation about the parameters: <br />
 
 * `object`:                 The ruby object which you want to export into files. <br />
 * `export_path`(optional):  The path where you want to generate your export file. Default will be './example.FILE_TYPE' such as './example.yml' <br />
-* `confirmation`(optional): To confirm if you want to overwrite the existing file from export_path. <br />
+* `force_overwrite`(optional): This option is ```false``` by default. If you set it to true, it will automaticlly overwrite existing file `without` any interrupt warning. <br />
 
 ## Here are some samples:
 
