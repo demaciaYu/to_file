@@ -5,6 +5,7 @@ This gem is aim to transform the format of objects to be suitable for exporting 
 Currently supported export files: </br>
 * `YAML`
 * `JSON`
+* `XML`
 
 ## Installation
 
@@ -47,6 +48,23 @@ a = [1,2,3]
 ToFile::To.yml(a, './test/a.yml', false)
 ```
 
+* JSON
+
+```ruby
+require 'to_file'
+
+a = {a: 1, b: "hello", c: [1,2,3], d: {e: 1 ,f: "dd"}}
+ToFile::To.yml a
+```
+
+* XML
+
+```ruby
+require 'to_file'
+
+a = {a: 1, b: "hello", c: [1,2,3], d: {e: 1 ,f: "dd"}}
+ToFile::To.xml a
+```
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
