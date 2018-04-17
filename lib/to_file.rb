@@ -1,6 +1,8 @@
-require "to_file/version"
+require 'to_file/version'
 require 'yaml'
 require 'json'
+require 'active_support'
+require 'active_support/core_ext'
 
 module ToFile
   class To
@@ -9,7 +11,8 @@ module ToFile
       type_hash = {
         yml:  "yml",
         yaml: "yml",
-        json: "json"
+        json: "json",
+        xml:  "xml"
       }
 
       type_hash.each do |key, value| 
@@ -42,10 +45,18 @@ module ToFile
         end
       end
 
+      def to_xml(target_object)
+        begin
+          target_object.to_xml
+        rescue => e
+          raise ArgumentError, error_msg("xml", e.message)
+        end
+      end
+
       def error_msg(data_type, err)
         'target_object can not be transformed to ' +
           data_type.to_s +
-          ' format! And the error msg is: ' +
+          ' format! The error msg is: ' +
           err.to_s
       end
 
